@@ -9,19 +9,19 @@ const NewArt: React.FC = () => {
     const history = useHistory()
     return(
         <div className="px-8 py-4 space-y-4">
-            <h1 className="text-2xl font-mono text-transparent bg-clip-text bg-gradient-to-tr from-purple-600 to-cyan-700">
+            <h1 className="text-2xl font-mono font-bold text-transparent bg-clip-text bg-gradient-to-tr from-purple-600 to-cyan-700">
                 Hottest NFT's:
             </h1>
             <section className="flex">
-                <div className="overflow-auto flex w-min space-x-4">
+                <div className="overflow-auto flex w-min space-x-4 scrollbar-track-gray-700">
                     {
                         data.hottestNfts.map((art, index) => {
                             return(
                                 <div 
-                                    className="border border-purple-900 shadow-md rounded-md bg-gray-900 space-y-2 min-w-screen-sm" 
+                                    className="border border-purple-900 shadow-md rounded-md bg-gray-900 space-y-2 lg:space-y-6 min-w-screen-sm" 
                                     key={index}
                                 >
-                                    <div className="w-64">
+                                    <div className="w-64 space-y-2">
                                         <img 
                                             src={art.image} 
                                             alt={art.name} 
@@ -36,7 +36,7 @@ const NewArt: React.FC = () => {
                                             </div>
                                             <FontAwesomeIcon 
                                                 icon={faArrowRight} 
-                                                className="text-purple-800"
+                                                className="text-purple-800 cursor-pointer"
                                                 onClick={() => history.push('/artist')}
                                             />
                                         </div>

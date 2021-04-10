@@ -1,7 +1,9 @@
+import React from 'react'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React from 'react'
 import { useHistory } from 'react-router'
+
+//fake backend
 import { data } from '../../data'
 
 const TopArtists: React.FC = () => {
@@ -9,7 +11,7 @@ const TopArtists: React.FC = () => {
     const history = useHistory()
 
     return(
-        <div className="px-8 py-4 space-y-4">
+        <div className="px-8 py-4 space-y-4 mt-16">
             <h1 className="text-2xl font-mono text-transparent bg-clip-text bg-gradient-to-tr from-purple-600 to-cyan-700">
                 Top Artists:
             </h1>

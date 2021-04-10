@@ -10,8 +10,10 @@ const Dashboard: React.FC = () => {
         <IonPage>
             <div className="min-h-screen overflow-auto">
                 <TopBar />
-                <Discover />
-                <NewArt />
+                <div className="py-4">
+                    <Discover />
+                    <NewArt />
+                </div>
             </div>
         </IonPage>
     )
