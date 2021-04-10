@@ -10,7 +10,7 @@ const NewArt: React.FC = () => {
     return(
         <div className="px-8 py-4 space-y-4">
             <h1 className="text-2xl font-mono font-bold text-transparent bg-clip-text bg-gradient-to-tr from-purple-600 to-cyan-700">
-                Hottest NFT's:
+                Hottest NFT's <span className="text-red-400">🔥</span>:
             </h1>
             <section className="flex">
                 <div className="overflow-auto flex w-min space-x-4 scrollbar-track-gray-700">

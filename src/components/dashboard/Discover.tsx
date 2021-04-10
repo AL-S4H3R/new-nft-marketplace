@@ -13,7 +13,7 @@ const TopArtists: React.FC = () => {
     return(
         <div className="px-8 py-4 space-y-4 mt-16">
             <h1 className="text-2xl font-mono text-transparent bg-clip-text bg-gradient-to-tr from-purple-600 to-cyan-700">
-                Top Artists:
+                Top Artists <span className="text-red-700">💯</span>:
             </h1>
             <section className="flex">
                 <div className="overflow-auto flex w-min space-x-4">

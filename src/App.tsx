@@ -17,6 +17,8 @@ import './index.css'
 import Home from './pages/Home';
 import Dashboard from './pages/Dashboard';
 import ArtistProfile from './pages/ArtistProfile';
+import Wallet from './pages/Wallet';
+import MintNft from './pages/MintNft';
 
 const App: React.FC = () => {
     return(
@@ -26,6 +28,8 @@ const App: React.FC = () => {
                     <Route exact path="/" component={Home} />
                     <Route path="/dashboard" component={Dashboard}/>
                     <Route path="/artist" component={ArtistProfile }/>
+                    <Route path="/wallet" component={Wallet} />
+                    <Route path="/mint" component={MintNft} />
                 </IonRouterOutlet>
             </IonReactRouter>        
         </IonApp>
