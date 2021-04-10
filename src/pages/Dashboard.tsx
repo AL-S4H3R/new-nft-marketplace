@@ -6,7 +6,7 @@ import TopBar from '../components/dashboard/Topbar'
 const Dashboard: React.FC = () => {
     return(
         <IonPage>
-            <div className="h-screen w-screen overflow-y-auto overflow-x-auto">
+            <div className="min-h-screen">
                 <TopBar />
                 <Discover />
             </div>

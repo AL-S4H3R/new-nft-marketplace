@@ -9,15 +9,20 @@ const TopArtists: React.FC = () => {
                 Top Artists:
             </h1>
             <section className="flex">
-            <div className="overflow-auto space-y-8">
+            <div className="overflow-auto flex w-min space-x-4">
                 {
                     data.topArtists.map((art, index) => {
                         return(
-                            <div className="border border-gray-900 py-2 space-y-2 bg-gray-800">
-                                <div className="px-2">
-                                    <h1>by - {art.name}</h1>
+                            <div 
+                                className="border border-gray-900 py-2 space-y-2 bg-gray-800 min-w-screen-sm" 
+                                key={index}
+                            >
+                                <div className="w-64">
+                                    <div>
+                                        <h1>by - {art.name}</h1>
+                                    </div>
+                                    <img src={art.image} alt={art.name} className="w-full"/>
                                 </div>
-                                <img src={art.image} alt={art.name}/>
                             </div>
                         )
                     })
