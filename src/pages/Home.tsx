@@ -15,7 +15,7 @@ const Home: React.FC = () => {
 
     return(
         <IonPage>
-            <div className="h-screen w-screen px-8 py-4 space-y-20">
+            <div className="h-screen w-screen px-8 py-4 space-y-20 overflow-auto">
                 <div className="space-x-2">
                     <h1 className="font-mono text-transparent bg-clip-text bg-gradient-to-tl from-cyan-500 to-fuchsia-500 font-bold text-3xl">
                         vybe

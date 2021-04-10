@@ -16,6 +16,7 @@ import './index.css'
 //pages
 import Home from './pages/Home';
 import Dashboard from './pages/Dashboard';
+import ArtistProfile from './pages/ArtistProfile';
 
 const App: React.FC = () => {
     return(
@@ -24,6 +25,7 @@ const App: React.FC = () => {
                 <IonRouterOutlet>
                     <Route exact path="/" component={Home} />
                     <Route path="/dashboard" component={Dashboard}/>
+                    <Route path="/artist" component={ArtistProfile }/>
                 </IonRouterOutlet>
             </IonReactRouter>        
         </IonApp>

@@ -1,22 +1,21 @@
+import React from 'react'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React from 'react'
-import { useHistory } from 'react-router'
 import { data } from '../../data'
+import { useHistory } from 'react-router'
 
-const TopArtists: React.FC = () => {
-
+const NewArt: React.FC = () => {
+    
     const history = useHistory()
-
     return(
         <div className="px-8 py-4 space-y-4">
             <h1 className="text-2xl font-mono text-transparent bg-clip-text bg-gradient-to-tr from-purple-600 to-cyan-700">
-                Top Artists:
+                Hottest NFT's:
             </h1>
             <section className="flex">
                 <div className="overflow-auto flex w-min space-x-4">
                     {
-                        data.topArtists.map((art, index) => {
+                        data.hottestNfts.map((art, index) => {
                             return(
                                 <div 
                                     className="border border-purple-900 shadow-md rounded-md bg-gray-900 space-y-2 min-w-screen-sm" 
@@ -29,9 +28,12 @@ const TopArtists: React.FC = () => {
                                             className="w-full h-48"
                                         />
                                         <div className="p-4 flex items-center justify-between">
-                                            <p className="font-mono text-transparent bg-clip-text bg-gradient-to-tr font-bold from-gray-400 to-gray-100">
-                                                @{art.name}
-                                            </p>
+                                            <div >
+                                                <p className="font-mono text-transparent bg-clip-text bg-gradient-to-tr font-bold from-gray-400 to-gray-100">
+                                                    {art.name}
+                                                </p>
+                                                <p className="text-gray-400 text-xs font-mono"> @{art.by}</p>
+                                            </div>
                                             <FontAwesomeIcon 
                                                 icon={faArrowRight} 
                                                 className="text-purple-800"
@@ -39,7 +41,12 @@ const TopArtists: React.FC = () => {
                                             />
                                         </div>
                                         <div className="pb-3">
-                                            <p className="text-left text-sm px-3 text-gray-400 font-medium">{art.bio}</p>
+                                            <p className="text-left text-sm px-3 text-gray-400 font-medium">{art.description}</p>
+                                        </div>
+                                        <div className="flex justify-center pb-3 px-4">
+                                            <button className="text-gray-300 bg-purple-600 px-2 py-1 rounded-md w-full">
+                                                {art.price} ETH
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -52,4 +59,4 @@ const TopArtists: React.FC = () => {
     )
 }
 
-export default TopArtists
+export default NewArt
