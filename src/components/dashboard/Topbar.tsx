@@ -8,9 +8,14 @@ const TopBar: React.FC = () => {
 
     const { account } = useWeb3()
     const history = useHistory()
+    
     const gotoMint = () => {
-        if(!account) history.push('/mint')
-        history.push('/wallet')
+        if(account !== null){
+            history.push('/mint')
+        } 
+        else {
+            history.push('/wallet')
+        }
     }
 
     return(

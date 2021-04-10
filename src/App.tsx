@@ -19,10 +19,12 @@ import Dashboard from './pages/Dashboard';
 import ArtistProfile from './pages/ArtistProfile';
 import Wallet from './pages/Wallet';
 import MintNft from './pages/MintNft';
+import Web3ContextProvider from './context/Web3Context';
 
 const App: React.FC = () => {
     return(
         <IonApp>
+            <Web3ContextProvider>
             <IonReactRouter>
                 <IonRouterOutlet>
                     <Route exact path="/" component={Home} />
@@ -31,7 +33,8 @@ const App: React.FC = () => {
                     <Route path="/wallet" component={Wallet} />
                     <Route path="/mint" component={MintNft} />
                 </IonRouterOutlet>
-            </IonReactRouter>        
+            </IonReactRouter>  
+            </Web3ContextProvider>      
         </IonApp>
     )
 }
