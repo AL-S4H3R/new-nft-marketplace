@@ -43,7 +43,7 @@ const NewArt: React.FC = () => {
                                         <div className="pb-3">
                                             <p className="text-left text-sm px-3 text-gray-400 font-medium">{art.description}</p>
                                         </div>
-                                        <div className="flex justify-center pb-3 px-4">
+                                        <div className="flex justify-center pb-3 px-4 font-mono font-bold">
                                             <button className="text-gray-300 bg-purple-600 px-2 py-1 rounded-md w-full">
                                                 {art.price} ETH
                                             </button>

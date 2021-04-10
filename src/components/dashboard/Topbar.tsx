@@ -4,7 +4,7 @@ import { faBars, faUserAlt } from '@fortawesome/free-solid-svg-icons'
 
 const TopBar: React.FC = () => {
     return(
-        <nav style={{backgroundColor:"#13151a"}} className="sticky z-50 px-8 py-4 flex items-center justify-between text-xl shadow-lg rounded-lg">
+        <nav style={{backgroundColor:"#13151a"}} className="fixed w-full px-8 py-4 flex items-center justify-between text-xl shadow-lg">
             <div className=" px-3 py-1 rounded-full text-gray-300 text-opacity-80">
                 <FontAwesomeIcon icon={faBars}/>
             </div>

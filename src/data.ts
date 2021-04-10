@@ -43,56 +43,56 @@ export const data = {
             name: 'NFT 1',
             by: 'Cameron Barnes',
             description: loremIpsum,
-            price: '3',
+            price: '3.00',
             image: cam1 
         },
         {
             name: 'NFT 2',
             by: 'Gary Butterfield',
             description: loremIpsum,
-            price: '4.5',
+            price: '4.51',
             image: gary1
         },
         {
             name: 'NFT 3',
             by: 'Jon Tyson',
             description: loremIpsum,
-            price: '1.5',
+            price: '1.55',
             image: jon1
         },
         {
             name: 'NFT 4',
             by: 'Sunyu ',
             description: loremIpsum,
-            price: '8',
+            price: '8.06',
             image: sunyu
         },
         {
             name: 'NFT 1',
             by: 'Cameron Barnes',
             description: loremIpsum,
-            price: '3',
+            price: '3.00',
             image: cam1 
         },
         {
             name: 'NFT 2',
             by: 'Gary Butterfield',
             description: loremIpsum,
-            price: '4.5',
+            price: '4.51',
             image: gary1
         },
         {
             name: 'NFT 3',
             by: 'Jon Tyson',
             description: loremIpsum,
-            price: '1.5',
+            price: '1.56',
             image: jon1
         },
         {
             name: 'NFT 4',
             by: 'Sunyu ',
             description: loremIpsum,
-            price: '8',
+            price: '8.06',
             image: sunyu
         },
     ]
