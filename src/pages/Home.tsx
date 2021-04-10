@@ -15,7 +15,7 @@ const Home: React.FC = () => {
 
     return(
         <IonPage>
-            <div className="h-screen w-screen px-8 py-4 space-y-24">
+            <div className="h-screen w-screen px-8 py-4 space-y-20">
                 <div className="space-x-2">
                     <h1 className="font-mono text-transparent bg-clip-text bg-gradient-to-tl from-cyan-500 to-fuchsia-500 font-bold text-3xl">
                         vybe
@@ -29,7 +29,7 @@ const Home: React.FC = () => {
                     </div>
                 </div>
                 <div className="flex justify-center">
-                    <button onClick={() => history.push('/dashboard')} className="bg-gradient-to-br from-purple-400 to-teal-500 p-2 text-xl rounded-lg">Start Vybing</button>
+                    <button onClick={() => history.push('/dashboard')} className="bg-gradient-to-br font-mono from-fuchsia-400 to-cyan-500 p-2 text-xl rounded-lg">Start Vybing</button>
                 </div>
             </div>
         </IonPage>
