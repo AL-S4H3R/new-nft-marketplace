@@ -7,12 +7,15 @@ import { useWeb3 } from '../context/Web3Context'
 const Wallet: React.FC = () => {
     
     const history = useHistory()
-    const { connectToPortis } = useWeb3()
+    const { connectToPortis, contractInstance } = useWeb3()
     
     const connectWallet = async () => {
         try {
-            var account = await connectToPortis()
-            console.log(account)
+            var web3 = await connectToPortis()
+            if(web3){
+                var contract = await contractInstance(web3)
+                console.log(contract)
+            }
         }
         catch(err){
             console.error(err)

@@ -6,7 +6,7 @@ import Vybe from '../smart-contract/build/contracts/Vybe.json'
 interface IWeb3 {
     web3Instance: Web3 | null;
     account: string | null;
-    connectToPortis: () => Promise<void> | void;
+    connectToPortis: () => Promise<Web3> | void;
     contractInstance: (web3: Web3) => any
 }
 
@@ -35,6 +35,7 @@ const Web3ContextProvider: React.FC = ({children}) => {
         console.log(web3)
         var accounts = await web3.eth.getAccounts()
         setAccount(accounts[0])
+        return web3
     }
 
     const contractInstance = async (web3: Web3) => {
