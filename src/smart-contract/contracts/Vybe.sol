@@ -14,7 +14,7 @@ contract Vybe is ERC721, VRFConsumerBase {
     uint256 internal fee;
     uint256 public randomResult;
 
-    uint256 public vrfCoordinator;
+    address public vrfCoordinator;
     
     enum Category {
         VISIONARY,
@@ -29,7 +29,7 @@ contract Vybe is ERC721, VRFConsumerBase {
 
     constructor(address _VRFCoordinator, address _LinkToken, bytes32 _keyHash) public
     VRFConsumerBase(_VRFCoordinator, _LinkToken)
-    ERC721("VYBE", "VYB") public {
+    ERC721("VYBE", "VYB") {
         vrfCoordinator = _VRFCoordinator;
         keyHash = _keyHash;
         fee = 0.1 * 10**18; // 1 Link
