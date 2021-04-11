@@ -13,17 +13,22 @@ const TopBar: React.FC = () => {
                     vybe
                 </h1>
             </div>
-            <div className="flex space-x-4 lg:space-x-12 text-base font-mono uppercase">
-                <NavLink to="/mint" className=" text-gray-400 hover:border-b hover:border-purple-700">
-                    <p className="text-md font-mono hover:text-purple-700 ">
-                        Create_NFT
+            <div className="flex space-x-4 lg:space-x-12 text-base font-mono uppercase items-center">
+                <NavLink to="/mint" className=" hover:border-b hover:border-purple-700">
+                    <p className="text-base font-mono hover:bg-purple-900 bg-purple-700 px-3 py-1">
+                        Create
                     </p>
                 </NavLink>
                 {
                     account 
-                    ? <NavLink to="/account"><p className="text-base text-gray-400 hover:text-purple-700">Account</p></NavLink> 
-                    : <NavLink to="/wallet"><p className="text-base text-gray-400 hover:text-purple-700">Wallet</p></NavLink>
+                    ? <NavLink to="/account"><p className="text-base hover:text-purple-700">Account</p></NavLink> 
+                    : <NavLink to="/wallet"><p className="text-base hover:text-purple-700">Login</p></NavLink>
                 }
+                <NavLink to="/dashboard">
+                    <p className="text-base font-mono hover:text-purple-700">
+                        Blog
+                    </p>
+                </NavLink>
             </div>
         </nav>
     )
