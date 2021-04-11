@@ -1,7 +1,7 @@
 const HDWalletProvider = require('@truffle/hdwallet-provider')
 require('dotenv').config()
-
-const mnemonic = process.env.MNEMONIC
+const fs = require('fs')
+const mnemonic = fs.readFileSync(".secret").toString().trim();
 const url = process.env.RPC_URL
 
 module.exports = {
