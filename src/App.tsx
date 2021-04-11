@@ -26,13 +26,13 @@ const App: React.FC = () => {
         <IonApp>
             <Web3ContextProvider>
             <IonReactRouter>
-                <IonRouterOutlet>
+                {/* <IonRouterOutlet> */}
                     <Route exact path="/" component={Home} />
-                    <Route path="/dashboard" component={Dashboard}/>
-                    <Route path="/artist" component={ArtistProfile }/>
-                    <Route path="/wallet" component={Wallet} />
-                    <Route path="/mint" component={MintNft} />
-                </IonRouterOutlet>
+                    <Route exact path="/dashboard" component={Dashboard}/>
+                    <Route exact path="/artist" component={ArtistProfile }/>
+                    <Route exact path="/wallet" component={Wallet} />
+                    <Route exact path="/mint" component={MintNft} />
+                {/* </IonRouterOutlet> */}
             </IonReactRouter>  
             </Web3ContextProvider>      
         </IonApp>
